@@ -22,6 +22,13 @@ export default function Register({ handleClose, show }) {
   const [isError, setIsError] = useState(false);
   const [messageError, setMessageError] = useState("");
 
+  /**
+   * use to create an user account
+   * @param {string} username
+   * @param {string} email
+   * @param {string} password
+   * @return token
+   */
   const sendRequest = () => {
     const payload = {
       username: state.username,
