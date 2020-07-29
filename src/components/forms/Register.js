@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import '../../style/Form.scss'
 import axios from 'axios';
+import Context from '../../context/context';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Register({ handleClose, show }) {
   const pathLogo = process.env.REACT_APP_STATIC_IMG_PATH;
   const pathServer = process.env.REACT_APP_SERVER_PATH;
+
+  const { isAuthenticated, setIsAuthenticated } = useContext(Context)
 
   const [state, setState] = useState({
     username: "",
@@ -27,7 +31,8 @@ export default function Register({ handleClose, show }) {
     axios
       .post(`${pathServer}/auth/signup`, payload)
       .then(function (response) {
-        console.log(response.data)
+        setIsAuthenticated(response.data.token)
+        localStorage.setItem('token', response.data.token)
         setToken(response.data.token)
         setLoggedIn(true)
         handleClose()
@@ -57,17 +62,30 @@ export default function Register({ handleClose, show }) {
       <div className="form-overlay">
         <div className="form-wrapper">
           <div className="form">
-              <button onClick={handleClose}>close</button>
+            <div className="form-close-icon">
+            <FontAwesomeIcon
+              className="close-btn"
+              onClick={handleClose}
+              icon={['fas', 'times-circle']} size="lg" />
+            </div>
             <form onSubmit={handleSubmit}>
-              <div className="form-logo">
-                <img src={`${pathLogo}/fingerprint.svg`} alt="typing-master-logo" />
+              <div className="form-header">
+                <div className="form-logo">
+                  <img src={`${pathLogo}/fingerprint.svg`} alt="typing-master-logo" />
+                </div>
+                <h2 className="form-title">Typing-skill</h2>
               </div>
-              <h2 className="form-title">Typing-skills</h2>
-              {isError && (
-              <div className="error-msg">
-                <div>{messageError}</div>
+              <div className="form-body">
+              <div className="error-box">
+                {isError && (
+                  <div className="error-msg">
+                    <FontAwesomeIcon
+                      className="finger-print"
+                      icon={['fas', 'fingerprint']} size="lg" />
+                    <div>{messageError}</div>
+                  </div>
+                )}
               </div>
-              )}
               <div className="form-input">
                 <input
                   type="email"
@@ -101,6 +119,7 @@ export default function Register({ handleClose, show }) {
               <div className="form-bot">
                 <div className="form-link">Already have an account ?</div>
                 <button className="btn-base">S'inscrire</button>
+              </div>
               </div>
             </form >
           </div>

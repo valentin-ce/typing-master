@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react'
+import '../style/Navbar.scss';
 import Login from './forms/Login'
 import Register from './forms/Register'
+import Profile from './Profile'
 import {
   BrowserRouter as Router,
   Redirect,
@@ -18,6 +20,7 @@ export default function Navbar() {
   const [showSignIn, setShowSignIn] = useState(false);
 
   const token = localStorage.getItem('token')
+  console.log(token)
 
   const showFormSignUp = () => {
     if (showSignUp) {
@@ -57,16 +60,16 @@ export default function Navbar() {
         <div className="navbar-left">
           <ul className="navbar-list-left">
             <li className="nav-item">
-              <Link to="/home">Home</Link>
+              <Link className="link" to="/home">Home</Link>
               </li>
             <li className="nav-item">
-              <Link to="/Play">Play</Link>
+              <Link className="link" to="/Play">Play</Link>
             </li>
             <li className="nav-item">
-              <Link to="/Score">Score</Link>
+              <Link className="link" to="/Score">Score</Link>
             </li>
             <li className="nav-item">
-              <Link to="/contact">Contact</Link>
+              <Link className="link" to="/contact">Contact</Link>
               </li>
           </ul>
         </div>
@@ -75,6 +78,11 @@ export default function Navbar() {
             <li className="nav-item"
               onClick={e => { logout() }}
             >Logout</li>
+            <li className="nav-item">
+              <Link to="/profile" className="link">
+                Settings
+              </Link>
+            </li>
           </ul>
           <ul classname="navbar-list" style={!token ? { display: "flex" } : { display: "none" }}>
             <li className="nav-item"

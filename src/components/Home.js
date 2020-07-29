@@ -10,10 +10,10 @@ export default function Home() {
         <div className="App">
             <div className="landing-container">
                 <h1 className="landing-title">
-                    Typing-Skills
+                    Typing-Skill
                 </h1>
                 <h2 className="landing-text">
-                    Learn to write
+                    Apprenez la dactylographie comme personne.
                 </h2>
                 <div className="landing-logo">
                     <img src={`${pathLogo}/fingerprint.svg`} alt="typing-master-logo" />

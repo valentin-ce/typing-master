@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Play from './components/Play';
 import Score from './components/Score';
 import Contact from './components/Contact';
+import Profile from './components/Profile'
 import Context from './context/context';
 import {
   BrowserRouter as Router,
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact></Contact>
+          </Route>
+          <Route path="/Profile">
+            <Profile></Profile>
           </Route>
         </Switch>
       </Router>
