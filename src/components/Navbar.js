@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="navbar-left">
           <ul className="navbar-list-left">
             <li className="nav-item">
-              <Link className="link" to="/home">Home</Link>
+              <Link className="link" to="/">Home</Link>
               </li>
             <li className="nav-item">
               <Link className="link" to="/Play">Play</Link>
@@ -84,7 +84,7 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <ul classname="navbar-list" style={!token ? { display: "flex" } : { display: "none" }}>
+          <ul className="navbar-list" style={!token ? { display: "flex" } : { display: "none" }}>
             <li className="nav-item"
               onClick={e => { showFormSignUp() }}
             >Register</li>
