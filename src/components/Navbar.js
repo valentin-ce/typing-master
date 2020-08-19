@@ -83,7 +83,7 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <ul classname="navbar-list" style={!token ? { display: "flex" } : { display: "none" }}>
+          <ul className="navbar-list" style={!token ? { display: "flex" } : { display: "none" }}>
             <li className="nav-item"
               onClick={e => { showFormSignUp() }}
             >Register</li>
