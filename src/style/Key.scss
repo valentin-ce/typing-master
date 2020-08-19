@@ -1,0 +1,107 @@
+$bgColor: #242424;
+$textColor: #fff;
+$mainColor: #FF7A00;
+$baseFont: 'ubuntu';
+$monoFont: 'ubuntu mono';
+$condensedFont: 'ubuntu condensed';
+
+$keyPinkyLeft: #FF0000;
+$keyRingFingerLeft: #FF7A00;
+$keyMiddleFingerLeft: #FFF500;
+$keyIndexFingerLeft: #8FFF00;
+$keyIndexFingerRight: #00FFC2;
+$keyMiddleFingerRight: #0066FF;
+$keyRingFingerRight: #8F00FF;
+$keyPinkyRight: #FF00D6;
+$keyThumb: #fff;
+
+$keyRadius: 10px;
+
+.keyboard {
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-line, .middle-line, .bottom-line, .space-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.key {
+    font-family: $monoFont;
+    min-width: 75px;
+    min-height: 75px;
+    font-size: 2em;
+    text-align: center;
+    margin: 0.2rem;
+}
+
+.PinkyLeft {
+    color: $keyPinkyLeft;
+    border: 5px solid $keyPinkyLeft;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyPinkyLeft);
+}
+
+.RingFingerLeft {
+    color: $keyRingFingerLeft;
+    border: 5px solid $keyRingFingerLeft;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyRingFingerLeft);
+}
+
+.MiddleFingerLeft {
+    color: $keyMiddleFingerLeft;
+    border: 5px solid $keyMiddleFingerLeft;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyMiddleFingerLeft);
+}
+
+.IndexFingerLeft {
+    color: $keyIndexFingerLeft;
+    border: 5px solid $keyIndexFingerLeft;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyIndexFingerLeft);
+}
+
+.IndexFingerRight {
+    color: $keyIndexFingerRight;
+    border: 5px solid $keyIndexFingerRight;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyIndexFingerRight);
+}
+
+.MiddleFingerRight {
+    color: $keyMiddleFingerRight;
+    border: 5px solid $keyMiddleFingerRight;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyMiddleFingerRight);
+}
+
+.RingFingerRight {
+    color: $keyRingFingerRight;
+    border: 5px solid $keyRingFingerRight;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyRingFingerRight);
+}
+
+.PinkyRight {
+    color: $keyPinkyRight;
+    border: 5px solid $keyPinkyRight;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyPinkyRight);
+}
+
+.spaceBar {
+    text-align: center;
+    font-size: 2em;
+    min-width: 500px;
+    min-height: 75px;
+    color: $keyThumb;
+    border: 5px solid $keyThumb;
+    border-radius: $keyRadius;
+    filter: drop-shadow(0px 0px 10px $keyThumb);
+}

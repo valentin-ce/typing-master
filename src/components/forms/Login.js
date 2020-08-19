@@ -28,7 +28,7 @@ export default function Login({ handleClose, show }) {
       password: state.password,
     };
     axios
-      .post(`${pathServer}/auth/signin`, payload)
+      .post(`${pathServer}/api/v1/auth/signin`, payload)
       .then(function (response) {
         console.log(response.data)
         setIsAuthenticated(response.data.token)
@@ -37,7 +37,7 @@ export default function Login({ handleClose, show }) {
         handleClose()
       })
       .catch(function (error) {
-        console.log(error.response)
+        console.log(error)
         setIsError(true);
         setMessageError(error.response.data.error)
       });

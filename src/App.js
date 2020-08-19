@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.scss';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import About from './components/About';
 import Play from './components/Play';
 import Score from './components/Score';
 import Contact from './components/Contact';
@@ -27,8 +28,11 @@ function App() {
       <Router>
         <Navbar></Navbar>
         <Switch>
-          <Route path="/Home">
+          <Route exact path="/">
             <Home></Home>
+          </Route>
+          <Route path="/About">
+            <About></About>
           </Route>
           <Route path="/Play">
             <Play></Play>

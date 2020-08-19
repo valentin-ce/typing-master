@@ -4,10 +4,6 @@ import Login from './forms/Login'
 import Register from './forms/Register'
 import Profile from './Profile'
 import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
   Link,
 } from "react-router-dom";
 import Context from '../context/context';
@@ -60,7 +56,10 @@ export default function Navbar() {
         <div className="navbar-left">
           <ul className="navbar-list-left">
             <li className="nav-item">
-              <Link className="link" to="/home">Home</Link>
+              <Link className="link" to="/">Home</Link>
+              </li>
+            <li className="nav-item">
+              <Link className="link" to="/About">About</Link>
               </li>
             <li className="nav-item">
               <Link className="link" to="/Play">Play</Link>

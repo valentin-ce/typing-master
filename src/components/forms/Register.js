@@ -36,7 +36,7 @@ export default function Register({ handleClose, show }) {
       password: state.password,
     };
     axios
-      .post(`${pathServer}/auth/signup`, payload)
+      .post(`${pathServer}/api/v1/auth/signup`, payload)
       .then(function (response) {
         setIsAuthenticated(response.data.token)
         localStorage.setItem('token', response.data.token)
