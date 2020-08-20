@@ -1,21 +1,30 @@
-$bgColor: #242424;
+$bgColor: #222222;
 $textColor: #fff;
 $mainColor: #FF7A00;
 $baseFont: 'ubuntu';
 $monoFont: 'ubuntu mono';
 $condensedFont: 'ubuntu condensed';
 
-$keyPinkyLeft: #FF0000;
-$keyRingFingerLeft: #FF7A00;
-$keyMiddleFingerLeft: #FFF500;
-$keyIndexFingerLeft: #8FFF00;
-$keyIndexFingerRight: #00FFC2;
-$keyMiddleFingerRight: #0066FF;
-$keyRingFingerRight: #8F00FF;
-$keyPinkyRight: #FF00D6;
+$keyPinkyLeft: hsl(224, 85%, 55%);
+$keyRingFingerLeft: hsl(269, 85%, 55%);
+$keyMiddleFingerLeft: hsl(314, 85%, 55%);
+$keyIndexFingerLeft: hsl(359, 85%, 55%);
+$keyIndexFingerRight: hsl(44, 85%, 55%);
+$keyMiddleFingerRight: hsl(89, 85%, 55%);
+$keyRingFingerRight: hsl(134, 85%, 55%);
+$keyPinkyRight: hsl(179, 85%, 55%);
 $keyThumb: #fff;
 
 $keyRadius: 10px;
+$border: 8px solid rgba($color: #000000, $alpha: 0.2);
+$glowRadius: 3px;
+
+.about-title {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    font-family: $monoFont;
+}
 
 .keyboard {
     align-items: center;
@@ -25,83 +34,104 @@ $keyRadius: 10px;
     flex-direction: column;
 }
 
-.top-line, .middle-line, .bottom-line, .space-bar {
+.nb-line, .top-line, .middle-line, .bottom-line, .space-bar {
     display: flex;
     flex-direction: row;
 }
 
+.nb-line {
+    margin-left: -50px;
+}
+
+.top-line {
+    margin-left: -0px;
+}
+
+.middle-line {
+    margin-left: 50px;
+}
+
+.bottom-line {
+    margin-left: 100px
+}
+
+.space-line {
+    margin-left: 100px;
+}
+
 .key {
     font-family: $monoFont;
-    min-width: 75px;
-    min-height: 75px;
+    min-width: 50px;
+    min-height: 50px;
     font-size: 2em;
     text-align: center;
-    margin: 0.2rem;
+    margin: 0.3rem;
+    background: #242424;
 }
 
 .PinkyLeft {
     color: $keyPinkyLeft;
-    border: 5px solid $keyPinkyLeft;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyPinkyLeft);
+    filter: drop-shadow(0px 0px $glowRadius $keyPinkyLeft);
 }
 
 .RingFingerLeft {
     color: $keyRingFingerLeft;
-    border: 5px solid $keyRingFingerLeft;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyRingFingerLeft);
+    filter: drop-shadow(0px 0px $glowRadius $keyRingFingerLeft);
 }
 
 .MiddleFingerLeft {
     color: $keyMiddleFingerLeft;
-    border: 5px solid $keyMiddleFingerLeft;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyMiddleFingerLeft);
+    filter: drop-shadow(0px 0px $glowRadius $keyMiddleFingerLeft);
 }
 
 .IndexFingerLeft {
     color: $keyIndexFingerLeft;
-    border: 5px solid $keyIndexFingerLeft;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyIndexFingerLeft);
+    filter: drop-shadow(0px 0px $glowRadius $keyIndexFingerLeft);
 }
 
 .IndexFingerRight {
     color: $keyIndexFingerRight;
-    border: 5px solid $keyIndexFingerRight;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyIndexFingerRight);
+    filter: drop-shadow(0px 0px $glowRadius $keyIndexFingerRight);
 }
 
 .MiddleFingerRight {
     color: $keyMiddleFingerRight;
-    border: 5px solid $keyMiddleFingerRight;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyMiddleFingerRight);
+    filter: drop-shadow(0px 0px $glowRadius $keyMiddleFingerRight);
 }
 
 .RingFingerRight {
     color: $keyRingFingerRight;
-    border: 5px solid $keyRingFingerRight;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyRingFingerRight);
+    filter: drop-shadow(0px 0px $glowRadius $keyRingFingerRight);
 }
 
 .PinkyRight {
     color: $keyPinkyRight;
-    border: 5px solid $keyPinkyRight;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyPinkyRight);
+    filter: drop-shadow(0px 0px $glowRadius $keyPinkyRight);
 }
 
 .spaceBar {
     text-align: center;
     font-size: 2em;
-    min-width: 500px;
-    min-height: 75px;
+    min-width: 400px;
+    min-height: 50px;
     color: $keyThumb;
-    border: 5px solid $keyThumb;
+    border: $border;
     border-radius: $keyRadius;
-    filter: drop-shadow(0px 0px 10px $keyThumb);
+    filter: drop-shadow(0px 0px $glowRadius $keyThumb);
 }

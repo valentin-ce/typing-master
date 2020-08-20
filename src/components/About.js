@@ -5,10 +5,20 @@ import '../style/Key.scss'
 export default function About() {
     return (
         <div>
-            <p>About</p>
             <h3 className="about-title">How it's work ?</h3>
-
             <div className="keyboard">
+            <div className="nb-line">
+                <div className="key PinkyLeft">1</div>
+                <div className="key RingFingerLeft">2</div>
+                <div className="key MiddleFingerLeft">3</div>
+                <div className="key IndexFingerLeft">4</div>
+                <div className="key IndexFingerLeft">5</div>
+                <div className="key IndexFingerRight">6</div>
+                <div className="key IndexFingerRight">7</div>
+                <div className="key MiddleFingerRight">8</div>
+                <div className="key RingFingerRight">9</div>
+                <div className="key PinkyRight">0</div>
+            </div>
             <div className="top-line">
                 <div className="key PinkyLeft">A</div>
                 <div className="key RingFingerLeft">Z</div>
@@ -46,7 +56,7 @@ export default function About() {
                 <div className="key PinkyRight">§</div>
             </div>
             <div className="space-line">
-                <div className="spaceBar">___</div>
+                <div className="key spaceBar">_</div>
             </div>
             </div>
         </div>
