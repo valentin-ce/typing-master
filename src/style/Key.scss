@@ -74,6 +74,12 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyPinkyLeft);
+    transition: 0.1s;
+}
+
+.PinkyLeft:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 8px $keyPinkyLeft);
 }
 
 .RingFingerLeft {
@@ -81,6 +87,11 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyRingFingerLeft);
+    transition: 0.1s;
+}
+.RingFingerLeft:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 8px $keyRingFingerLeft);
 }
 
 .MiddleFingerLeft {
@@ -88,6 +99,11 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyMiddleFingerLeft);
+    transition: 0.1s;
+}
+.MiddleFingerLeft:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 8px $keyMiddleFingerLeft);
 }
 
 .IndexFingerLeft {
@@ -95,6 +111,11 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyIndexFingerLeft);
+    transition: 0.1s;
+}
+.IndexFingerLeft:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 8px $keyIndexFingerLeft);
 }
 
 .IndexFingerRight {
@@ -102,6 +123,11 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyIndexFingerRight);
+    transition: 0.1s;
+}
+.IndexFingerRight:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 8px $keyIndexFingerRight);
 }
 
 .MiddleFingerRight {
@@ -109,6 +135,11 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyMiddleFingerRight);
+    transition: 0.1s;
+}
+.MiddleFingerRight:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 8px $keyMiddleFingerRight);
 }
 
 .RingFingerRight {
@@ -116,6 +147,11 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyRingFingerRight);
+    transition: 0.1s;
+}
+.RingFingerRight:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 8px $keyRingFingerRight);
 }
 
 .PinkyRight {
@@ -123,6 +159,11 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyPinkyRight);
+    transition: 0.1s;
+}
+.PinkyRight:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 8px $keyPinkyRight);
 }
 
 .spaceBar {
@@ -134,6 +175,11 @@ $glowRadius: 3px;
     border: $border;
     border-radius: $keyRadius;
     filter: drop-shadow(0px 0px $glowRadius $keyThumb);
+    transition: 0.1s;
+}
+.spaceBar:hover {
+    scale: 1.03;
+    filter: drop-shadow(0px 0px 5px $keyThumb);
 }
 
 .about-text {

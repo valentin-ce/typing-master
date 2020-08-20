@@ -119,8 +119,10 @@ export default function Register({ handleClose, show }) {
             />
           </div>
           <div className="form-bot">
-            <Link className="link" to="/Login">Déjà un compte ?</Link>
-            <button className="btn-base">S'inscrire</button>
+            <Link className="link link-form" to="/Login">Déjà un compte ?</Link>
+            <div className="gradient-border-btn">
+              <button className="btn-base">S'inscrire</button>
+            </div>
           </div>
         </div>
       </form >

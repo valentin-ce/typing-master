@@ -1,6 +1,6 @@
 $bgColor: #222222;
 $textColor: #fff;
-$mainColor: #FF7A00;
+$mainColor:hsl(179, 85%, 55%);
 $errorColor: #FF0000;
 $baseFont: 'ubuntu';
 $monoFont: 'ubuntu mono';
@@ -21,13 +21,13 @@ $condensedFont: 'ubuntu condensed';
 
 
 .form {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
   }
 
   .form-body {
-      padding: 40px;
+      padding-bottom: 50px;
   }
 
 .form-input {
@@ -62,14 +62,24 @@ input {
 
 .btn-base {
     border: none;
-    background: linear-gradient(90deg, hsl(314, 85%, 55%) 0%, hsl(179, 85%, 40%) 100%);
+    background: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     color: $textColor;
-    font-family: $baseFont;
+    font-family: $condensedFont;
+    font-size: 1.2em;
     height: 35px;
     width: 150px;
     cursor: pointer;
+}
+
+.link-form {
+    color: $mainColor;
+    font-family: $condensedFont;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    margin: auto 0;
+    border-bottom: 2px solid $mainColor;
 }
 
 .error-msg {
@@ -81,3 +91,50 @@ input {
     flex-direction: row;
     color: $errorColor;
 }
+
+.gradient-border-btn {
+  --border-width: 5px;
+
+  position: relative;
+  width: 150px;
+  height: 35px;
+  color: white;
+  background: $bgColor;
+  border-radius: 5px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      /*
+      hsl(314, 85%, 55%),
+      hsl(179, 85%, 45%)
+      */
+hsl(224, 85%, 55%),
+hsl(269, 85%, 55%),
+hsl(314, 85%, 55%),
+hsl(359, 85%, 55%),
+hsl(44, 85%, 55%),
+hsl(89, 85%, 55%),
+hsl(134, 85%, 55%),
+hsl(179, 85%, 55%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(1 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+

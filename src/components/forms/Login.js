@@ -102,9 +102,11 @@ export default function Login({ handleClose, show }) {
             />
           </div>
           <div className="form-bot">
-            <Link className="link" to="/Register">Pas de compte ?</Link>
-            <button
+            <Link className="link link-form" to="/Register">Pas de compte ?</Link>
+            <div className="gradient-border-btn">
+             <button
               className="btn-base">S'identifier</button>
+            </div>
           </div>
         </div>
       </form>
