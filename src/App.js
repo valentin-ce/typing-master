@@ -7,6 +7,8 @@ import Play from './components/Play';
 import Score from './components/Score';
 import Contact from './components/Contact';
 import Profile from './components/Profile'
+import Login from './components/forms/Login';
+import Register from './components/forms/Register';
 import Context from './context/context';
 import {
   BrowserRouter as Router,
@@ -45,6 +47,15 @@ function App() {
           </Route>
           <Route path="/Profile">
             <Profile></Profile>
+          </Route>
+          <Route path="/Profile">
+            <Profile></Profile>
+          </Route>
+          <Route path="/Login">
+            <Login></Login>
+          </Route>
+          <Route path="/Register">
+            <Register></Register>
           </Route>
         </Switch>
       </Router>

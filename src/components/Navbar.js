@@ -12,37 +12,10 @@ export default function Navbar() {
 
   const {isAuthenticated, setIsAuthenticated} = useContext(Context)
 
-  const [showSignUp, setShowSignUp] = useState(false);
-  const [showSignIn, setShowSignIn] = useState(false);
 
   const token = localStorage.getItem('token')
   console.log(token)
 
-  const showFormSignUp = () => {
-    if (showSignUp) {
-      setShowSignUp(false)
-    }
-    else {
-      setShowSignIn(false)
-      setShowSignUp(true)
-    }
-  }
-  const hideFormSignIn = () => {
-    setShowSignIn(false);
-  }
-  const hideFormSignUp = () => {
-    setShowSignUp(false)
-  }
-
-  const showFormSignIn = () => {
-    if (showSignIn) {
-      setShowSignIn(false)
-    }
-    else {
-      setShowSignUp(false)
-      setShowSignIn(true);
-    }
-  }
 
   const logout = () => {
     setIsAuthenticated('');
@@ -84,20 +57,14 @@ export default function Navbar() {
             </li>
           </ul>
           <ul className="navbar-list" style={!token ? { display: "flex" } : { display: "none" }}>
-            <li className="nav-item"
-              onClick={e => { showFormSignUp() }}
-            >Register</li>
-            <li className="nav-item"
-              onClick={e => { showFormSignIn() }}
-            >Login</li>
+            <li className="nav-item">
+              <Link className="link" to="/Register">Register</Link>
+              </li>
+            <li className="nav-item">
+              <Link className="link" to="/Login">Login</Link>
+              </li>
           </ul>
           </div>
-        </div>
-        <div className="login-form">
-          <Login show={showSignIn} handleClose={hideFormSignIn}></Login>
-        </div>
-        <div className="login-form">
-          <Register show={showSignUp} handleClose={hideFormSignUp}></Register>
         </div>
       </div>
   )

@@ -18,6 +18,7 @@ $condensedFont: 'ubuntu condensed';
 
 .logo {
   width: 120px;
+  color: red;
 }
 
 .gradient-border {
@@ -84,7 +85,7 @@ h1 {
 }
 
 h2 {
-  color: $mainColor;
+  color: $textColor;
   font-family: $monoFont;
   font-weight: 300;
 }
@@ -96,5 +97,5 @@ h3 {
 }
 
 .landing-text {
-
+  color: $mainColor;
 }

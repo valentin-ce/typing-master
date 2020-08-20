@@ -10,7 +10,7 @@ export default function Home() {
         <div className="App">
             <div className="landing-container">
                 <div className="logo-container">
-                <div class="gradient-border">
+                <div className="gradient-border">
                     <div className="landing-logo">
                         <img className="logo" src={`${pathLogo}/fingerprintVanilla.svg`} alt="typing-master-logo" />
                     </div>
