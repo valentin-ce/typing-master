@@ -99,3 +99,11 @@ h3 {
 .landing-text {
   color: $mainColor;
 }
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap; 
+  justify-content: space-around;
+  padding: 0;
+  margin: 10%
+}
