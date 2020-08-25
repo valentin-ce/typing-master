@@ -3,7 +3,7 @@ import '../../style/Form.scss'
 import axios from 'axios';
 import Context from '../../context/context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 export default function Register({ handleClose, show }) {
   const pathLogo = process.env.REACT_APP_STATIC_IMG_PATH;
@@ -43,6 +43,7 @@ export default function Register({ handleClose, show }) {
         localStorage.setItem('token', response.data.token)
         setToken(response.data.token)
         setLoggedIn(true)
+        window.location.reload()
       })
       .catch(function (error) {
         console.log(error.response)
@@ -62,6 +63,10 @@ export default function Register({ handleClose, show }) {
   function handleSubmit(event) {
     event.preventDefault();
     sendRequest();
+  }
+
+    if (isLoggedIn) {
+    return <Redirect to="/" />;
   }
 
   return (

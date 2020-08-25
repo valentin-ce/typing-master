@@ -1,13 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react'
 import axios from 'axios'
 import Context from '../context/context'
+import { Redirect } from "react-router-dom";
 
 export default function Profile() {
     const token = localStorage.getItem('token')
     const [user, setUser] = useState('');
-
-
-
+    const [isLoggedOut, setIsLoggedOut] = useState(false)
 
     useEffect(() => {
         var config = {
@@ -28,13 +27,36 @@ export default function Profile() {
             });
     }, [token])
 
-    const removeAccount = () => {
-        console.log('removed')
+    const sendRemoveAccount = () => {
+        var config = {
+            method: 'delete',
+            url: 'http://localhost:4000/api/v1/user',
+            headers: { 
+              'Authorization': `Bearer ${token}`
+            }
+          };
+          
+          axios(config)
+          .then(function (response) {
+            console.log(JSON.stringify(response.data));
+            setIsLoggedOut(true)
+            window.location.reload();
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+          
     }
 
-    console.log(user[0])
+    const removeAccount = () => {
+        console.log('removed')
+        sendRemoveAccount();
+        localStorage.clear('token');
+    }
 
-
+    if (isLoggedOut) {
+        return <Redirect to="/" />;
+    }
 
     return (
         <div>

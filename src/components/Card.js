@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import '../style/Card.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function Card({item, title, coveredletter, gamemod, difficulty}) {
 
@@ -17,6 +18,9 @@ function Card({item, title, coveredletter, gamemod, difficulty}) {
           <div className="card-synopsis">
           </div>
           <div className="card-footer">
+            <Link 
+            to="/Game" 
+            >start</Link>
           </div>
         </div>
       </div>

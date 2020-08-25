@@ -5,6 +5,6 @@ export default React.createContext({
     isAuthenticated: '',
     setIsAuthenticated: (name)=>{},
     user: '',
-    setUser: (name)=>{}
+    setUser: (name)=>{},
 })
 

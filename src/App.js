@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Play from './components/Play';
+import Game from './components/Game'
 import Score from './components/Score';
 import Contact from './components/Contact';
 import Profile from './components/Profile'
@@ -14,15 +15,18 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
+  useParams,
 } from "react-router-dom";
+import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState('');
   const context ={
     isAuthenticated,
-    setIsAuthenticated
+    setIsAuthenticated,
   }
+
 
   return (
     
@@ -38,6 +42,9 @@ function App() {
           </Route>
           <Route path="/Play">
             <Play></Play>
+          </Route>
+          <Route path="/Game">
+            <Game></Game>
           </Route>
           <Route path="/Score">
             <Score></Score>

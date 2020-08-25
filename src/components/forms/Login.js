@@ -3,7 +3,7 @@ import '../../style/Form.scss'
 import axios from 'axios';
 import Context from '../../context/context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 
 export default function Login({ handleClose, show }) {
@@ -35,11 +35,12 @@ export default function Login({ handleClose, show }) {
         setIsAuthenticated(response.data.token)
         localStorage.setItem('token', response.data.token);
         setLoggedIn(true)
+        window.location.reload()
       })
       .catch(function (error) {
         console.log(error)
         setIsError(true);
-        setMessageError(error.response.data)
+        setMessageError(error.response.data.error)
       });
   };
 
@@ -61,17 +62,21 @@ export default function Login({ handleClose, show }) {
     sendRequest();
   }
 
+  if (isLoggedIn) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <div className="form">
       <form onSubmit={handleSubmit}>
         <div className="form-header">
-      <div className="logo-container">
-        <div className="gradient-border">
-          <div className="landing-logo">
-            <img className="logo" src={`${pathLogo}/fingerprintVanilla.svg`} alt="typing-master-logo" />
+          <div className="logo-container">
+            <div className="gradient-border">
+              <div className="landing-logo">
+                <img className="logo" src={`${pathLogo}/fingerprintVanilla.svg`} alt="typing-master-logo" />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
           <h2 className="form-title">Typing-skills</h2>
         </div>
         <div className="form-body">
@@ -104,8 +109,8 @@ export default function Login({ handleClose, show }) {
           <div className="form-bot">
             <Link className="link link-form" to="/Register">Pas de compte ?</Link>
             <div className="gradient-border-btn">
-             <button
-              className="btn-base">S'identifier</button>
+              <button
+                className="btn-base">S'identifier</button>
             </div>
           </div>
         </div>

@@ -67,7 +67,8 @@ input {
     border-radius: 5px;
     color: $textColor;
     font-family: $condensedFont;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    letter-spacing: 3px;
     height: 35px;
     width: 150px;
     cursor: pointer;
@@ -93,7 +94,7 @@ input {
 }
 
 .gradient-border-btn {
-  --border-width: 5px;
+  --border-width: 2px;
 
   position: relative;
   width: 150px;
