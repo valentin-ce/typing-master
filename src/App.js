@@ -22,9 +22,12 @@ import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState('');
+  const [mapInfo, setMapInfo] = useState({});
   const context ={
     isAuthenticated,
     setIsAuthenticated,
+    mapInfo,
+    setMapInfo
   }
 
 
