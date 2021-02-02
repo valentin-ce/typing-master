@@ -6,5 +6,7 @@ export default React.createContext({
     setIsAuthenticated: (name)=>{},
     user: '',
     setUser: (name)=>{},
+    mapInfo: '',
+    setMapInfo: (name)=> {},
 })
 

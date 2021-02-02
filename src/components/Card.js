@@ -2,8 +2,12 @@ import React, { useContext, useState, useEffect } from 'react';
 import '../style/Card.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import context from '../context/context'
 
 function Card({item, title, coveredletter, gamemod, difficulty}) {
+
+  const { mapInfo, setMapInfo } = useContext(context)
+  
 
   return (
     <div className="card">
