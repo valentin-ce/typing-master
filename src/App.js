@@ -17,7 +17,6 @@ import {
   Switch,
   useParams,
 } from "react-router-dom";
-import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 
 function App() {
 

@@ -19,7 +19,7 @@ function Card({item, title, coveredletter, gamemod, difficulty}) {
           </div>
           <div className="card-footer">
             <Link 
-            to="/Game" 
+            to={`/Game?coveredletter=${coveredletter}&title=${title}&gamemod=${gamemod}`}
             >start</Link>
           </div>
         </div>
